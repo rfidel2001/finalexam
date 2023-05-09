@@ -18,6 +18,7 @@ test_count_observed_substrings()
 def test_count_possible_substrings():
     string = "ATTTGGATT"
     k = 2
+    #setting actual output and expected output
     actual_output = count_possible_substrings(string,k)
     expected_output = 8
     assert actual_output == expected_output
@@ -34,6 +35,7 @@ def test_linguistic_complexity():
     possible = count_possible_substrings(string, k)
     actual_output = linguistic_complexity(string,k)
     expected_output = 0.625
+    #asserting output
     assert actual_output == expected_output
 test_count_possible_substrings()
 
@@ -41,8 +43,10 @@ test_count_possible_substrings()
 def test_negatives_observed_substrings():
     string = "ATTTGGATT"
     k = -2
+    #setting actual output and expected output
     actual_output = count_observed_substrings(string,k)
     expected_output = None
+    #asserting output
     assert actual_output == expected_output
 test_negatives_observed_substrings()
 
@@ -50,8 +54,10 @@ test_negatives_observed_substrings()
 def test_negatives_possible_substrings():
     string = "ATTTGGATT"
     k = -2
+    #setting actual output and expected output
     actual_output = count_possible_substrings(string,k)
     expected_output = 0
+    #asserting output
     assert actual_output == expected_output
 test_negatives_possible_substrings()
 
@@ -59,8 +65,10 @@ test_negatives_possible_substrings()
 def test_empty_observed_substrings():
     string = ""
     k = 2
+    #setting actual output and expected output
     actual_output = count_possible_substrings(string,k)
     expected_output = 0
+    #asserting output
     assert actual_output == expected_output
 test_empty_observed_substrings()
 
@@ -90,6 +98,7 @@ def test_emptynegative_observed_substrings():
     #setting empty value for string and negative # for k 
     string = "" #empty string
     k = -2 #negative #
+    #setting actual output and expected output
     actual_output = count_observed_substrings(string,k)
     expected_output = None 
     assert actual_output == expected_output
